@@ -21,12 +21,12 @@
 <!-- NAVBAR -->
 <div class="top-nav">
   <div class="page-wrap" style="padding-top:0; padding-bottom:0; display:flex; justify-content:space-between; align-items:center;">
-    <span class="nav-brand">Jek.Dev</span>
+    <span class="nav-brand"> < Jek.AspDev /></span>
     <div class="nav-items d-none d-md-block">
       <a href="#about">About</a>
-      <a href="#stack">Stack</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#certificates">Certificates</a>
       <a href="#contacts">Contact</a>
     </div>
   </div>
@@ -36,45 +36,48 @@
   <div class="row g-6">
 
  <!-- PROFILE HEADER -->
-      <div class="profile-header fade-up">
-        <div class="d-flex gap-3 mb-3 align-items-start">
-          <div class="profile-pic">
-            <!-- Replace src with your actual photo -->
-          <img src="./profile.png" alt="">
-        </div>
-          <div class="flex-grow-1">
-            <div class="profile-name">
-              Jerick Untiveros
-            </div>
-            <div class="profile-location"><i class="bi bi-geo-alt me-1"></i>Batangas, Philippines</div>
-            <div class="profile-role">
-              Aspiring Dev <span>\</span>  IT Support/Helpdesk
-            </div>
-          </div>
-        </div>
-        <div class="profile-actions">
-          <a href="#" class="action-btn action-btn-primary">
-            <i class="bi bi-telephone"></i> Contact Me
-          </a>
-          <a href="Curriculum Vitae.pdf" class="action-btn action-btn-ghost" target="_blank">
-            <i class="bi bi-envelope"></i> View CV
-          </a>
-        </div>
+<!-- Add this toggle button wherever you want (e.g., top of page) -->
+<button class="dark-mode-toggle" id="darkModeToggle" title="Toggle dark mode">
+  <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+</button>
+
+<div class="profile-header fade-up">
+  <div class="d-flex gap-3 mb-3 align-items-start">
+    <div class="profile-pic">
+      <img src="./profile.png" alt="">
+    </div>
+    <div class="flex-grow-1">
+      <div class="profile-name">Jerick Untiveros</div>
+      <div class="profile-location">
+        <i class="bi bi-geo-alt me-1"></i>Batangas, Philippines
       </div>
+      <div class="profile-role">
+        Web Developer <span>\</span> IT Support
+      </div>
+    </div>
+  </div>
+  <div class="profile-actions">
+    <a href="#" class="action-btn action-btn-primary">
+      <i class="bi bi-telephone"></i> Contact Me
+    </a>
+    <a href="Curriculum Vitae.pdf" class="action-btn action-btn-ghost" target="_blank">
+      <i class="bi bi-envelope"></i> View CV
+    </a>
+  </div>
+</div>
 
       <!-- ABOUT -->
       <div id="about" class="section-card fade-up">
         <div class="section-card-title">About</div>
         <div class="about-text">
-          <p>Hi😁! I am a graduate from Batangas State University - The National Engineering University with a BS in Information Technology, majoring in Service Management. I pursued IT because I enjoy learning about Programming, Computer Hardware, Software, Networking, Designing, and other related fields.</p>
+          <p>Hi😁! I am a graduate from Batangas State University - The National Engineering University with a BS in Information Technology. I am motivated by the opportunity to solve technical problems, create useful systems, and improve user experiences through technology. I am also eager to expand my knowledge and skills while adapting to new technologies and industry trends.</p>
         </div>
       </div>
 
       <!-- TECH STACK -->
-      <div id="stack" class="section-card fade-up">
+      <div id="skills" class="section-card fade-up">
         <div class="stack-header">
           <div class="section-card-title mb-0">Tech Stack</div>
-          <a href="#" class="view-all-link">View All <i class="bi bi-arrow-right"></i></a>
         </div>
 
         <div class="stack-group-label">Frontend</div>
@@ -99,17 +102,16 @@
         <div class="stack-group-label">Design</div>
         <div class="tech-chips">
           <span class="chip">Figma</span>
-          <span class="chip">Photo</span>
+          <span class="chip">Photopea</span>
+          <span class="chip">Photoshop</span>
         </div>
 
         <div class="stack-group-label">Other Skills</div>
         <div class="tech-chips">
-          <span class="chip">Software/Hardware</span>
-          <span class="chip">Upgrade Win10 TO Win11</span>
+          <span class="chip">IT Support</span>
           <span class="chip">Software Installations</span>
           <span class="chip">Format/Reformat</span>
-          <span class="chip">Activate MS Office/Windows</span>
-          <span class="chip">Installing Windows OS</span>
+          <span class="chip">Technical Support</span>
         </div>
       </div>
 
@@ -117,14 +119,12 @@
       <div id="projects" class="section-card fade-up">
         <div class="stack-header">
           <div class="section-card-title mb-0">Recent Projects</div>
-          <a href="#" class="view-all-link">View All <i class="bi bi-arrow-right"></i></a>
         </div>
         <div>
           <a href="#" class="project-item">
             <div>
               <div class="proj-title">Cafe'N Tunay Shop</div>
               <div class="proj-desc">Develop to enhance customer experience through a user-friendly interface</div>
-              <span class="proj-tag">alpha-project.dev</span>
             </div>
             <i class="bi bi-arrow-up-right proj-arrow"></i>
           </a>
@@ -132,7 +132,6 @@
             <div>
               <div class="proj-title">WinInstall</div>
               <div class="proj-desc">Helping users install Windows OS and MS Office effortlessly</div>
-              <span class="proj-tag">beta-project.com</span>
             </div>
             <i class="bi bi-arrow-up-right proj-arrow"></i>
           </a>
@@ -140,7 +139,6 @@
             <div>
               <div class="proj-title">JA1: Mega Sanctuary Church Portal for Events</div>
               <div class="proj-desc">Easily manage church events and paid they events thru online banking</div>
-              <span class="proj-tag">gamma-app.io</span>
             </div>
             <i class="bi bi-arrow-up-right proj-arrow"></i>
           </a>
@@ -149,10 +147,9 @@
       </div>
 
       <!-- CERTIFICATES -->
-      <div class="section-card fade-up">
+      <div id="certificates" class="section-card fade-up">
         <div class="stack-header">
           <div class="section-card-title mb-0">Certificates</div>
-          <a href="#" class="view-all-link">View All <i class="bi bi-arrow-right"></i></a>
         </div>
         <div>
           <a href="#" class="cert-item">
@@ -204,6 +201,26 @@
     });
   }, { threshold: 0.06 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  const toggle = document.getElementById('darkModeToggle');
+const icon   = document.getElementById('darkModeIcon');
+
+// Persist preference
+const saved = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', saved);
+updateIcon(saved);
+
+toggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next    = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateIcon(next);
+});
+
+function updateIcon(theme) {
+  icon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
+}
 </script>
 </body>
 </html>

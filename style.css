@@ -13,6 +13,49 @@
       --dark-card: #1c1c1c;
       --dark-card2: #242424;
     }
+    
+      [data-theme="dark"] {
+    --bg:           #09090b;
+    --surface:      #18181b;
+    --border:       #27272a;
+    --text-primary: #fafafa;
+    --text-muted:   #a1a1aa;
+    --accent:       #3b82f6;
+    --accent-hover: #60a5fa;
+    --ghost-border: #3f3f46;
+    --ghost-hover:  #27272a;
+    --toggle-bg:    #27272a;
+    --toggle-color: #e4e4e7;
+    --shadow:       0 2px 12px rgba(0,0,0,.4);
+  }
+
+  /* ── Smooth theme transition ── */
+  *, *::before, *::after {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+  }
+
+  /* ── Toggle button ── */
+  .dark-mode-toggle {
+    position: fixed;
+    top: .5rem;
+    right: 1rem;
+    z-index: 999;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--toggle-bg);
+    color: var(--toggle-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow);
+  }
+  .dark-mode-toggle:hover {
+    background: var(--ghost-hover);
+  }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -177,13 +220,6 @@
       align-items: center;
       margin-bottom: 16px;
     }
-    .view-all-link {
-      font-size: 0.76rem;
-      color: var(--muted);
-      display: flex; align-items: center; gap: 4px;
-      transition: color 0.2s;
-    }
-    .view-all-link:hover { color: var(--text); }
 
     /* ── EXPERIENCE ── */
     .exp-item {
@@ -397,7 +433,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      .profile-actions { gap: 8px; }
+      .profile-actions { gap: px; }
       .action-btn { padding: 8px 14px; font-size: 0.75rem; }
     }
     @media (max-width: 576px) {
