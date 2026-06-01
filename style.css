@@ -429,7 +429,7 @@
     .fade-up {
       opacity: 0;
       transform: translateY(16px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition: opacity 0.5s ease, transform 1s ease;
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
