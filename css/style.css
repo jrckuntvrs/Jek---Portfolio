@@ -421,25 +421,7 @@
     border-radius: 8px;
     padding: 2rem;
     box-shadow: var(--shadow);
-  }
-  .form-control{
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    padding: 0.7rem 0.9rem;
-  }
-  .form-control:focus{
-    background: var(--bg-alt);
-    color: var(--text);
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(232,179,76,0.15);
-  }
-  .form-label{
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--muted);
-    letter-spacing: 0.5px;
+    max-width: 100%;
   }
   .contact-link{
     display: flex;
