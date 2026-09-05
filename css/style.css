@@ -437,6 +437,11 @@
   }
 
   /* ---------- View Output button ---------- */
+  .view {
+    display: flex;
+    gap: 0.5rem;
+
+  }
   .btn-view-output{
     background: transparent;
     border: 1px solid rgba(232,179,76,0.35);
@@ -446,10 +451,26 @@
     padding: 0.5rem 0.9rem;
     border-radius: 3px;
     margin-top: 1.1rem;
+    margin-bottom: .3rem;
     align-self: flex-start;
     transition: background .2s ease, color .2s ease;
   }
+    .btn-view-site{
+    background: transparent;
+    border: 1px solid rgba(57, 19, 224, 0.35);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 3px;
+    margin-top: 1.1rem;
+    margin-bottom: .3rem;
+    align-self: flex-start;
+    transition: transform 0.3s ease;
+
+  }
   .btn-view-output:hover{ background: var(--gold); color: var(--sel-text); }
+
 
   /* ---------- iOS output preview modal ---------- */
   #outputModal .modal-content{
@@ -466,7 +487,10 @@
     font-weight: 600;
   }
   #outputModal .btn-close{ 
-    filter: none;
+    filter: invert(1);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color .2s ease;
   }
 
   .screenshot-frame{
