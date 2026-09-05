@@ -465,7 +465,9 @@
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
   }
-  #outputModal .btn-close{ filter: none; }
+  #outputModal .btn-close{ 
+    filter: none;
+  }
 
   .screenshot-frame{
     width: 100%;
