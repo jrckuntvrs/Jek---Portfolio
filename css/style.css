@@ -292,6 +292,12 @@
         padding: 0.15rem 0.55rem;
         border-radius: 3px;
       }
+        .case-id{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: var(--muted);
+        letter-spacing: 0.5px;
+        }
       .case-title{
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 600;
