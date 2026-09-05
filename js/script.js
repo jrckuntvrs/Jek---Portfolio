@@ -122,9 +122,7 @@ function renderOutputFrame(){
   if (!outputImages.length){
     screenshotFrame.innerHTML = `
       <div class="screenshot-placeholder">
-        <i class="bi bi-image"></i>
-        No screenshots yet for<br><strong style="color:var(--text)">${outputTitle}</strong><br>
-        add some via the <code>data-imgs</code> attribute.
+        No screenshots yet available<br><strong style="color:var(--text)">${outputTitle}</strong><br>
       </div>`;
     return;
   }
