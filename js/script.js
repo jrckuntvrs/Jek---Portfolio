@@ -111,23 +111,51 @@
     });
   });
 
-  // Output preview modal — populate screenshot per project
-  const outputModal = document.getElementById('outputModal');
-  outputModal.addEventListener('show.bs.modal', (event) => {
-    const btn = event.relatedTarget;
-    const title = btn.getAttribute('data-title') || 'Project Output';
-    const img = btn.getAttribute('data-img');
-    document.getElementById('outputModalTitle').textContent = title;
+  // Output preview modal — populate a scrollable set of screenshots per project
+const outputModal = document.getElementById('outputModal');
+const screenshotFrame = document.getElementById('screenshotFrame');
+let outputImages = [];
+let outputIndex = 0;
+let outputTitle = 'Project Output';
 
-    const frame = document.getElementById('screenshotFrame');
-    if (img) {
-      frame.innerHTML = `<img src="${img}" alt="${title} screenshot">`;
-    } else {
-      frame.innerHTML = `
-        <div class="screenshot-placeholder">
-          <i class="bi bi-image"></i>
-          No screenshot yet for<br><strong style="color:var(--text)">${title}</strong><br>
-          add one via the <code>data-img</code> attribute.
-        </div>`;
-    }
-  });
+function renderOutputFrame(){
+  if (!outputImages.length){
+    screenshotFrame.innerHTML = `
+      <div class="screenshot-placeholder">
+        <i class="bi bi-image"></i>
+        No screenshots yet for<br><strong style="color:var(--text)">${outputTitle}</strong><br>
+        add some via the <code>data-imgs</code> attribute.
+      </div>`;
+    return;
+  }
+
+  const showNav = outputImages.length > 1;
+  screenshotFrame.innerHTML = `
+    ${showNav ? `<button type="button" class="cert-ctrl cert-ctrl-prev" id="outputPrev" aria-label="Previous screenshot"><i class="bi bi-chevron-left"></i></button>` : ''}
+    <img src="${outputImages[outputIndex]}" alt="${outputTitle} screenshot ${outputIndex + 1}">
+    ${showNav ? `<button type="button" class="cert-ctrl cert-ctrl-next" id="outputNext" aria-label="Next screenshot"><i class="bi bi-chevron-right"></i></button>` : ''}
+    ${showNav ? `<div class="screenshot-counter">${outputIndex + 1} / ${outputImages.length}</div>` : ''}
+  `;
+
+  if (showNav){
+    document.getElementById('outputPrev').addEventListener('click', () => {
+      outputIndex = (outputIndex - 1 + outputImages.length) % outputImages.length;
+      renderOutputFrame();
+    });
+    document.getElementById('outputNext').addEventListener('click', () => {
+      outputIndex = (outputIndex + 1) % outputImages.length;
+      renderOutputFrame();
+    });
+  }
+}
+
+outputModal.addEventListener('show.bs.modal', (event) => {
+  const btn = event.relatedTarget;
+  outputTitle = btn.getAttribute('data-title') || 'Project Output';
+  document.getElementById('outputModalTitle').textContent = outputTitle;
+
+  const raw = btn.getAttribute('data-imgs') || '';
+  outputImages = raw.split(',').map(s => s.trim()).filter(Boolean);
+  outputIndex = 0;
+  renderOutputFrame();
+});
