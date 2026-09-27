@@ -34,6 +34,7 @@
       }
 
       /* ---------- Constellation network background (inside the shell) ---------- */
+
       #galaxy-canvas{
         position: absolute;
         inset: 0;
